@@ -53,7 +53,7 @@ class Empty(Piece):
     def __init__(self, team):
         super().__init__(team)
         self.piece = ' '
-        self.img = pygame.image.load('Chess Images/Empty.png')
+        self.img = pygame.image.load('Chess_Images/Empty.png')
         self.empty = True
         self.enPassant = False
 
@@ -67,7 +67,7 @@ class Pawn(Piece):
         super().__init__(team)
         self.piece = 'P'
         self.doublemove = True
-        self.img = pygame.image.load(f'Chess Images/{self.team}P.png')
+        self.img = pygame.image.load(f'Chess_Images/{self.team}P.png')
         if self.team == 'W':
             self.dir = -1
         else:
@@ -106,8 +106,8 @@ class Pawn(Piece):
         global running
 
         exit = False
-        bImages = ['Chess Images/BQ.png', 'Chess Images/BR.png', 'Chess Images/BN.png', 'Chess Images/BB.png']
-        wImages = ['Chess Images/WQ.png', 'Chess Images/WR.png', 'Chess Images/WN.png', 'Chess Images/WB.png']
+        bImages = ['Chess_Images/BQ.png', 'Chess_Images/BR.png', 'Chess_Images/BN.png', 'Chess_Images/BB.png']
+        wImages = ['Chess_Images/WQ.png', 'Chess_Images/WR.png', 'Chess_Images/WN.png', 'Chess_Images/WB.png']
 
         BLACK = (0, 0, 0)
         GREY = (75, 75, 75)
@@ -180,7 +180,7 @@ class King(Piece):
         super().__init__(team)
         self.piece = 'K'
         self.castleAble = True
-        self.img = pygame.image.load(f'Chess Images/{self.team}K.png')
+        self.img = pygame.image.load(f'Chess_Images/{self.team}K.png')
 
     def movement(self):
         self.moves = []
@@ -232,7 +232,7 @@ class Rook(Piece):
         super().__init__(team)
         self.piece = 'R'
         self.castleAble = True
-        self.img = pygame.image.load(f'Chess Images/{self.team}R.png')
+        self.img = pygame.image.load(f'Chess_Images/{self.team}R.png')
 
     def movement(self):
         self.moves = []
@@ -265,7 +265,7 @@ class Bishop(Piece):
     def __init__(self, team):
         super().__init__(team)
         self.piece = 'B'
-        self.img = pygame.image.load(f'Chess Images/{self.team}B.png')
+        self.img = pygame.image.load(f'Chess_Images/{self.team}B.png')
 
     def movement(self):
         self.moves = []
@@ -297,7 +297,7 @@ class Queen(Piece):
     def __init__(self, team):
         super().__init__(team)
         self.piece = 'Q'
-        self.img = pygame.image.load(f'Chess Images/{self.team}Q.png')
+        self.img = pygame.image.load(f'Chess_Images/{self.team}Q.png')
 
     def movement(self):
         self.moves = []
@@ -314,7 +314,7 @@ class Knight(Piece):
     def __init__(self, team):
         super().__init__(team)
         self.piece = 'N'
-        self.img = pygame.image.load(f'Chess Images/{self.team}N.png')
+        self.img = pygame.image.load(f'Chess_Images/{self.team}N.png')
 
     def movement(self):
         self.moves = []
@@ -501,7 +501,7 @@ def main():
 
     updateIndex()
 
-    windowIcon = pygame.image.load('Chess Images/Thumbnail.png')
+    windowIcon = pygame.image.load('Chess_Images/Thumbnail.png')
     pygame.display.set_icon(windowIcon)
     pygame.display.set_caption('Turn 1 \ White\'s turn')
     SIZE = 480   
