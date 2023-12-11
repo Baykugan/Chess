@@ -460,7 +460,7 @@ def DRAW_BOARD(SCREEN, SIZE, TILE_SIZE):
             if board.index[i][j].takeable:
                 pygame.draw.rect(SCREEN, RED, rect)
                 pygame.draw.rect(SCREEN, BLACK, rect, 1)
-                if board.index[i][j].empty:
+                if board.index[i][j].empty and not board.index[i][j].enPassant:
                     pygame.draw.rect(SCREEN, BLUE, rect)
                     pygame.draw.rect(SCREEN, BLACK, rect, 1)
 
