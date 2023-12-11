@@ -159,8 +159,8 @@ class Pawn(Piece):
                     elif row == 1 and col == 1:
                         pos = Bishop(team)
 
-                    print(board.index[self.index[0]][self.index[1]])
-                    print(board)
+                    if printToTerminal:
+                        print(board)
 
 
                     exit = True
@@ -489,6 +489,7 @@ def main():
     global blackInCheck, whiteInCheck
     global turn
     global running
+    global printToTerminal
 
     board = Board()
     turn = 1
@@ -497,6 +498,9 @@ def main():
     whiteInCheck = False
     prevRow = -1
     prevCol = -1
+    printToTerminal = False
+    # if input(f'Do you want the game printed to the terminal? (y/n)') == 'y':
+    #     printToTerminal = True
 
 
     updateIndex()
@@ -576,7 +580,8 @@ def main():
                                 board.index[tempRow][tempCol].enPassant = False
 
                 else:
-                    print(f'It is not you turn')
+                    if printToTerminal:
+                        print(f'It is not you turn')
 
             
             DRAW_PIECES(SCREEN, TILE_SIZE)
@@ -640,7 +645,8 @@ def main():
 
             if clear:
                 board.clearBoard()
-            print(board)   
+            if printToTerminal:
+                print(board)   
 
 
 
