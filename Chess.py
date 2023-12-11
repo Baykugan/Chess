@@ -507,7 +507,7 @@ def main():
 
     windowIcon = pygame.image.load('Chess_Images/Thumbnail.png')
     pygame.display.set_icon(windowIcon)
-    pygame.display.set_caption('Turn 1 \ White\'s turn')
+    pygame.display.set_caption('Turn 1 \\ White\'s turn')
     SIZE = 480   
     TILE_SIZE = int(SIZE / board.size)
     SIZE = TILE_SIZE * board.size
@@ -617,21 +617,21 @@ def main():
             windowTitle = f'Turn {turn}'
 
             if turn % 2 == 1:
-                windowTitle += ' \ White\'s turn'
+                windowTitle += ' \\ White\'s turn'
             else:
-                windowTitle += ' \ Black\'s turn'
+                windowTitle += ' \\ Black\'s turn'
             
             checkForCheck()
             if whiteInCheck:
                 if checkForMate():
-                    windowTitle += ' \ White is in mate'
+                    windowTitle += ' \\ White is in mate'
                 else:
-                    windowTitle += ' \ White is in check'
+                    windowTitle += ' \\ White is in check'
             elif blackInCheck:
                 if checkForMate():
-                    windowTitle += ' \ Black is in mate'
+                    windowTitle += ' \\ Black is in mate'
                 else:
-                    windowTitle += ' \ Black is in check'
+                    windowTitle += ' \\ Black is in check'
             pygame.display.set_caption(windowTitle)
 
             
