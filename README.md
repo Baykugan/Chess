@@ -6,7 +6,8 @@ This is my attempt to make [Chess](https://en.wikipedia.org/wiki/Chess) in Pytho
 
 ## ToDo
 
-- Separate Piece classes to their own files
+- Fix castling
+- Clean up Piece classes
 - Add support for custom Piece classes
 - Separate Board setup to own file
 - Separate Board presets to own files
