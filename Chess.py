@@ -1,7 +1,7 @@
 import pygame
 
-from chess_pieces.pieces import *
-from board import Board 
+from Chess_Pieces.Pieces import *
+from Board import Board 
 
 
 def DRAW_BOARD(SCREEN, SIZE, TILE_SIZE):

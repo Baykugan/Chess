@@ -1,8 +1,8 @@
 import pygame
 
-from chess_pieces.piece import Piece
-from chess_pieces.rook import Rook
-from chess_pieces.bishop import Bishop
+from Chess_Pieces.Piece import Piece
+from Chess_Pieces.Rook import Rook
+from Chess_Pieces.Bishop import Bishop
 
 
 class Queen(Piece):
