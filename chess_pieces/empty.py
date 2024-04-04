@@ -1,5 +1,5 @@
 import pygame
-from chess_pieces.piece import Piece
+from Chess_Pieces.Piece import Piece
 
 class Empty(Piece):
 

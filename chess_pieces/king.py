@@ -1,7 +1,7 @@
 import pygame
 
-from chess_pieces.piece import Piece
-from chess_pieces.empty import Empty
+from Chess_Pieces.Piece import Piece
+from Chess_Pieces.Empty import Empty
 
 
 class King(Piece):

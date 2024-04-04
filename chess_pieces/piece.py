@@ -30,7 +30,7 @@ class Piece():
     
 
     def checksSelf(self, board, index):
-        from chess_pieces.empty import Empty
+        from Chess_Pieces.Empty import Empty
 
         global blackInCheck, whiteInCheck
         row, col = self.index
